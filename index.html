@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="music" src="music.mp3" loop></audio>
+    <audio id="openSound" src="open.mp3"></audio>
+    <audio id="fireSound" src="firework.mp3"></audio>
+
+
+<!-- موسيقى عيد الميلاد -->
+<audio id="music" src="music.mp3" loop></audio>
+<audio id="openSound" src="open.mp3"></audio>
+
+<!-- الصفحة الأولى -->
+<div class="container" id="welcome">
+    <h1 class="glow-name">✨ Sarah ✨</h1>
+    <p>Hi my love</p>
+    <p>I made this just for you!</p>
+    <p class="small">Play a little game to unlock your surprise 🎁</p>
+    <button onclick="startGame()">Start Game →</button>
+</div>
+
+<!-- اللعبة -->
+<div class="container hidden" id="game">
+    <h2>Pick the right heart 💖</h2>
+    <div class="hearts">
+        <span onclick="wrong()">💔</span>
+        <span onclick="win()">💖</span>
+        <span onclick="wrong()">💔</span>
+    </div>
+    <p id="game-msg"></p>
+</div>
+
+<!-- الهدية -->
+<div class="container hidden" id="letter">
+    <img src="photo.jpg" class="love-photo">
+    
+
+    <canvas id="fireworks"></canvas>
+
+    <!-- البالونات + الإيموجيات -->
+    <div id="sky"></div>
+    
+    
+
+    <div class="balloons">🎈 🎈 🎈 🎈 🎈</div>
+
+    <div class="cake">
+        <div class="number">14</div>
+        🎂
+        <div class="candles">🕯️ 🕯️ 🕯️</div>
+    </div>
+
+    <div class="paper">
+        <p>
+            Happy birthday to the person who owns my heart 💖<br><br>
+
+            I’m so proud of you, of your strength, your smile,
+            and everything you are.<br><br>
+
+            Even when distance separates us,
+            my heart is always with you.<br><br>
+
+            You are my peace, my happiness,
+            and my favorite person in this world.<br><br>
+
+            Happy 14th Birthday, my love 🎉
+        </p>
+    </div>
+
+    <p class="footer">I love you forever, my baby 💕</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.6s ease;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #ffe6ee, #ffd1dc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    width: 360px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    position: absolute;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* اسم متحرك */
+.glow-name {
+    font-size: 32px;
+    color: #ff4d6d;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px pink; }
+    to { text-shadow: 0 0 20px #ff4d6d; }
+}
+
+button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d6336c;
+}
+
+.hearts span {
+    font-size: 40px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+/* بالونات */
+.balloons {
+    font-size: 40px;
+    animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
+}
+
+/* كعكة */
+.cake {
+    font-size: 80px;
+    margin: 15px 0;
+    position: relative;
+}
+
+.number {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff4d6d;
+    text-shadow: 0 0 10px pink;
+}
+
+.candles {
+    font-size: 28px;
+    animation: flicker 0.6s infinite alternate;
+}
+
+@keyframes flicker {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+/* رسالة */
+.paper {
+    background: #fffdf7;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #f3c4d3;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.footer {
+    margin-top: 15px;
+    color: #ff4d6d;
+    font-weight: bold;
+}
+
+/* ألعاب نارية */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
